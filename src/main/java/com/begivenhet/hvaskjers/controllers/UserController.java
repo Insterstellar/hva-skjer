@@ -22,6 +22,7 @@ public class UserController {
         this.userServices = userServices;
     }
 
+
     @PostMapping ("/save")
     public ResponseEntity<UserModel> saveUsers(@RequestBody UserModel saveUser){
         UserModel users=userServices.userSave(saveUser);

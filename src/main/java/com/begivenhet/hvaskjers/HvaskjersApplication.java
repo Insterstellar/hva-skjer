@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
+@RequestMapping("/welcome")
 public class HvaskjersApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HvaskjersApplication.class, args);
 	}
 
-	@RequestMapping("/weclome")
+	@RequestMapping("")
 	public String welcome(){
 		return "<h1>Welcome message</h1>";
 	}
