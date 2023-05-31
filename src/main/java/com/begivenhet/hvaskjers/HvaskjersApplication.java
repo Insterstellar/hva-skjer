@@ -2,12 +2,13 @@ package com.begivenhet.hvaskjers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
 @SpringBootApplication
-@RestController
+@Controller
 @RequestMapping("")
 public class HvaskjersApplication {
 
@@ -17,7 +18,7 @@ public class HvaskjersApplication {
 
 	@RequestMapping("")
 	public String welcome(){
-		return "<h1>Welcome message</h1>";
+		return "index";
 	}
 
 }
