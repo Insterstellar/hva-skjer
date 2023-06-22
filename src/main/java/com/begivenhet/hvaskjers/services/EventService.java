@@ -65,5 +65,19 @@ public class EventService implements EventInterfaces {
         return eventsRepo.findFirstByEventNameContainingIgnoreCase(eventName);
     }
 
+    @Override
+    public Events updateEvent(Events events, Long id) {
+        Events oldEvent = eventsRepo.findById(id).orElseThrow(null);
+        oldEvent.setEventName(events.getEventName());
+        oldEvent.setEventDescription(events.getEventDescription());
+        oldEvent.setEventImage(events.getEventImage());
+        oldEvent.setEventVenue(events.getEventVenue());
+        //oldEvent.setEventEndTime(e);
+        eventsRepo.save(oldEvent);
+
+
+        return oldEvent;
+    }
+
 
 }

@@ -35,6 +35,16 @@ public class EventsController {
     @GetMapping("/names/{name}")
     public Events findWithName(@PathVariable("name") String eventName){
         return eventService.findByName(eventName);
-    }}
+    }
+
+    @PostMapping("/updte/{event_id}")
+    public Events updatEvents(@RequestBody Events updateEvent, @PathVariable Long event_id){
+
+
+        return eventService.updateEvent(updateEvent,event_id);
+    }
+
+
+}
    // EVents 3
    // Example Event

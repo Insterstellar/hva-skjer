@@ -10,4 +10,5 @@ public interface EventInterfaces {
 
     Events saveYourEvent(Events events);
     Events findByName(String eventName);
+    Events updateEvent(Events events,Long id);
 }
