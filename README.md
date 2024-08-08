@@ -1,1 +1,1 @@
-## Spring Boot and Thymeleaf.
+## Spring Boot and Thymeleaf application.
